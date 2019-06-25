@@ -1,0 +1,11 @@
+  selectValueFromDropDown =function (valueToBeSelect) {
+        element.all(by.tagName("option")).each(function (item) {
+            item.getText("value").then(function (value) {
+                console.log(value);
+                if(value==valueToBeSelect)
+                {
+                    item.click();
+                }
+            })
+        })
+    }
